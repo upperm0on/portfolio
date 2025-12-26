@@ -1,0 +1,75 @@
+@import './variables.css';
+@import './themes/universe.css';
+@import './themes/typography.css';
+@import './themes/text-hierarchy.css';
+@import './themes/spacing.css';
+@import './themes/effects.css';
+@import './themes/breakpoints.css';
+
+:root {
+  color-scheme: dark;
+  color: var(--universe-text-body);
+  background-color: var(--universe-bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--universe-bg-primary);
+  color: var(--universe-text-body);
+  overflow-x: hidden;
+}
+
+/* Link styles are now in text-hierarchy.css */
+/* Ensure all links have no underline by default */
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--universe-comet);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

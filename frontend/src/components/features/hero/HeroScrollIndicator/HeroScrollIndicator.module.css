@@ -1,0 +1,79 @@
+/* HeroScrollIndicator styles */
+
+.indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--color-text-primary, #ffffff);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  will-change: transform;
+  z-index: 10;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.indicator:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.indicator {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Focus state for accessibility */
+.indicator:focus-visible {
+  outline: 2px solid var(--color-accent, #6366f1);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .indicator {
+    width: 40px;
+    height: 40px;
+    bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .indicator {
+    width: 36px;
+    height: 36px;
+    bottom: 1rem;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .indicator {
+    animation: none;
+    will-change: auto;
+  }
+}
+

@@ -1,0 +1,135 @@
+/* Hero Section Styles */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+}
+
+/* ============================================
+   TURN-ON EFFECT INITIAL STATES
+   ============================================
+   These are CSS fallbacks. GSAP will control
+   the actual animation, but these ensure the
+   hero starts "off" before JS runs.
+   ============================================ */
+
+/* Hero starts visually "off" when turn-on is enabled */
+/* Note: GSAP will override these, but they provide a fallback */
+.hero[data-hero-turnon="true"]:not([data-hero-turnon-complete="true"]) {
+  opacity: 0;
+  transform: scale(0.97);
+  /* Add a timeout fallback - if JS fails, show hero after 2s */
+  animation: heroTurnOnFallback 0.1s 2s forwards;
+}
+
+@keyframes heroTurnOnFallback {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Turn-on complete state - GSAP will animate to this */
+.hero[data-hero-turnon="true"][data-hero-turnon-complete="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Background dimmed during turn-on */
+.hero[data-hero-turnon="true"] [data-hero-turnon-background] {
+  opacity: 0.3;
+}
+
+.hero[data-hero-turnon="true"][data-hero-turnon-complete="true"] [data-hero-turnon-background] {
+  opacity: 1;
+}
+
+/* Content wrapper */
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Content variants */
+.content--centered {
+  align-items: center;
+  text-align: center;
+}
+
+.content--asymmetric {
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.content--split {
+  align-items: flex-start;
+  text-align: left;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+/* Floating animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero[data-floating="true"] .content {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .content--asymmetric {
+    padding-left: 1.5rem;
+  }
+
+  .content--split {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero[data-floating="true"] .content {
+    animation: none;
+  }
+  
+  /* Simpler initial state for reduced motion */
+  .hero[data-hero-turnon="true"] {
+    transform: scale(0.97);
+    /* No blur for reduced motion */
+  }
+}
+

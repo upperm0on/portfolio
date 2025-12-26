@@ -1,0 +1,50 @@
+/* Universe Theme - Color Palette */
+
+:root {
+  /* Core Colors - Deep Space */
+  --universe-deep-space: #0a0a0f;
+  --universe-void: #1a1a2e;
+  --universe-cosmic: #16213e;
+  --universe-nebula: #0f3460;
+  --universe-stardust: #533483;
+
+  /* Accent Colors - Celestial */
+  --universe-star: #e94560;
+  --universe-comet: #00d9ff;
+  --universe-galaxy: #7b2cbf;
+  --universe-aurora: #00f5ff;
+  --universe-sunset: #ff6b9d;
+
+  /* Text Colors - White Shade Hierarchy for Emphasis */
+  /* Higher opacity = Higher priority/emphasis */
+  --universe-text-hero: #ffffff;                    /* 100% - Hero text, main headlines */
+  --universe-text-primary: rgba(255, 255, 255, 0.95); /* 95% - Primary headings, important content */
+  --universe-text-emphasis: rgba(255, 255, 255, 0.9); /* 90% - Emphasized text, key information */
+  --universe-text-body: rgba(255, 255, 255, 0.85);   /* 85% - Body text, main content */
+  --universe-text-secondary: rgba(255, 255, 255, 0.7); /* 70% - Secondary content, descriptions */
+  --universe-text-tertiary: rgba(255, 255, 255, 0.6);  /* 60% - Tertiary content, metadata */
+  --universe-text-muted: rgba(255, 255, 255, 0.5);     /* 50% - Muted text, less important info */
+  --universe-text-subtle: rgba(255, 255, 255, 0.4);    /* 40% - Subtle text, hints, placeholders */
+  --universe-text-disabled: rgba(255, 255, 255, 0.25); /* 25% - Disabled text, inactive elements */
+  
+  /* Accent Text Colors */
+  --universe-text-accent: #00d9ff;
+  --universe-text-accent-hover: #00f5ff;
+
+  /* Gradient Definitions */
+  --gradient-cosmic: linear-gradient(135deg, var(--universe-deep-space) 0%, var(--universe-nebula) 100%);
+  --gradient-stardust: radial-gradient(circle at center, rgba(83, 52, 131, 0.3) 0%, transparent 70%);
+  --gradient-horizon: linear-gradient(180deg, var(--universe-deep-space) 0%, var(--universe-cosmic) 50%, var(--universe-nebula) 100%);
+  --gradient-aurora: linear-gradient(90deg, var(--universe-aurora) 0%, var(--universe-galaxy) 50%, var(--universe-star) 100%);
+
+  /* Background Colors */
+  --universe-bg-primary: var(--universe-deep-space);
+  --universe-bg-secondary: var(--universe-void);
+  --universe-bg-elevated: var(--universe-cosmic);
+
+  /* Border Colors */
+  --universe-border-primary: rgba(255, 255, 255, 0.1);
+  --universe-border-accent: rgba(0, 217, 255, 0.3);
+  --universe-border-glow: rgba(0, 217, 255, 0.5);
+}
+

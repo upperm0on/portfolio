@@ -1,0 +1,33 @@
+/* Universe Theme - Breakpoint System */
+
+:root {
+  /* Breakpoint Values */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Media Query Mixins (for reference) */
+/* 
+  Mobile First Approach:
+  - xs: 320px+ (default)
+  - sm: 640px+
+  - md: 768px+
+  - lg: 1024px+
+  - xl: 1280px+
+  - 2xl: 1536px+
+*/
+
+/* Usage Examples:
+  @media (min-width: 640px) { ... }  // sm
+  @media (min-width: 768px) { ... }  // md
+  @media (min-width: 1024px) { ... } // lg
+  @media (min-width: 1280px) { ... } // xl
+  @media (min-width: 1536px) { ... } // 2xl
+*/
+
+
+

@@ -1,0 +1,95 @@
+.starfieldCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.backgroundEffect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Nebula Effect */
+.nebula {
+  background: var(--gradient-cosmic);
+}
+
+.nebulaLayer1,
+.nebulaLayer2,
+.nebulaLayer3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: nebula-pulse 20s ease-in-out infinite;
+}
+
+.nebulaLayer1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -200px;
+  background: var(--universe-galaxy);
+  animation-delay: 0s;
+}
+
+.nebulaLayer2 {
+  width: 800px;
+  height: 800px;
+  bottom: -300px;
+  right: -300px;
+  background: var(--universe-nebula);
+  animation-delay: 5s;
+}
+
+.nebulaLayer3 {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--universe-stardust);
+  animation-delay: 10s;
+}
+
+/* Gradient Mesh Effect */
+.gradient {
+  background: var(--universe-deep-space);
+}
+
+.gradientMesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(83, 52, 131, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(15, 52, 96, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+  animation: aurora-wave 15s ease infinite;
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .nebulaLayer1,
+  .nebulaLayer2,
+  .nebulaLayer3,
+  .gradientMesh {
+    animation: none;
+  }
+}
+
+
+

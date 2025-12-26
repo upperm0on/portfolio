@@ -1,0 +1,133 @@
+/* About Skills Styles */
+
+.skills {
+  position: relative;
+}
+
+.skillsTitle {
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tighter);
+  color: var(--universe-text-primary);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.skillsTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--gradient-aurora);
+}
+
+.skillsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.categoryGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.categoryTitle {
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-subheading);
+  font-weight: var(--font-weight-bold);
+  color: var(--universe-text-emphasis);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skillItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--universe-bg-secondary);
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.skillItem:hover {
+  background: var(--universe-bg-elevated);
+  transform: translateY(-2px);
+}
+
+.skillName {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--universe-text-body);
+}
+
+.skillLevel {
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsTitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: 1.5rem;
+  }
+  
+  .categoryTitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .skillsList {
+    gap: 0.5rem;
+  }
+  
+  .skillItem {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skillItem {
+    transition: none;
+  }
+  
+  .skillItem:hover {
+    transform: none;
+  }
+}
+

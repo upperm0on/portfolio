@@ -1,0 +1,132 @@
+/* Text Hierarchy Utilities */
+/* Use these classes to apply appropriate text emphasis levels */
+
+/* Hero Text - Highest priority (100% white) */
+.text-hero {
+  color: var(--universe-text-hero);
+}
+
+/* Primary Text - High priority (95% white) */
+.text-primary {
+  color: var(--universe-text-primary);
+}
+
+/* Emphasis Text - Emphasized content (90% white) */
+.text-emphasis {
+  color: var(--universe-text-emphasis);
+}
+
+/* Body Text - Standard content (85% white) */
+.text-body {
+  color: var(--universe-text-body);
+}
+
+/* Secondary Text - Secondary content (70% white) */
+.text-secondary {
+  color: var(--universe-text-secondary);
+}
+
+/* Tertiary Text - Metadata, labels (60% white) */
+.text-tertiary {
+  color: var(--universe-text-tertiary);
+}
+
+/* Muted Text - Less important info (50% white) */
+.text-muted {
+  color: var(--universe-text-muted);
+}
+
+/* Subtle Text - Hints, placeholders (40% white) */
+.text-subtle {
+  color: var(--universe-text-subtle);
+}
+
+/* Disabled Text - Inactive elements (25% white) */
+.text-disabled {
+  color: var(--universe-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Accent Text */
+.text-accent {
+  color: var(--universe-text-accent);
+}
+
+.text-accent-hover:hover {
+  color: var(--universe-text-accent-hover);
+}
+
+/* Small Text - Automatically uses secondary color */
+small,
+.text-sm {
+  font-size: var(--font-size-sm);
+  color: var(--universe-text-secondary); /* 70% white for small text */
+}
+
+/* Caption Text - Uses tertiary color */
+.text-caption {
+  font-size: var(--font-size-xs);
+  color: var(--universe-text-tertiary); /* 60% white for captions */
+}
+
+/* Label Text - Uses secondary color */
+label,
+.text-label {
+  font-size: var(--font-size-sm);
+  color: var(--universe-text-secondary); /* 70% white for labels */
+  font-weight: var(--font-weight-medium);
+}
+
+/* Metadata Text - Uses tertiary color */
+.text-meta {
+  font-size: var(--font-size-xs);
+  color: var(--universe-text-tertiary); /* 60% white for metadata */
+}
+
+/* Helper Text - Uses muted color */
+.text-helper {
+  font-size: var(--font-size-sm);
+  color: var(--universe-text-muted); /* 50% white for helper text */
+}
+
+/* Link Text - Uses accent with hierarchy */
+a {
+  color: var(--universe-text-accent);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+a:hover {
+  color: var(--universe-text-accent-hover);
+  text-decoration: none;
+}
+
+/* Link in body text - slightly less prominent */
+p a,
+.text-body a {
+  color: var(--universe-text-accent);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+p a:hover,
+.text-body a:hover {
+  opacity: 1;
+  color: var(--universe-text-accent-hover);
+  text-decoration: none;
+}
+
+/* Link in secondary text - more muted */
+.text-secondary a,
+.text-tertiary a {
+  color: var(--universe-text-accent);
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.text-secondary a:hover,
+.text-tertiary a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+

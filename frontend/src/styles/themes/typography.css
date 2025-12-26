@@ -1,0 +1,168 @@
+/* Universe Theme - Typography System */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Font Families - Distinct fonts for each element */
+  --font-family-heading: 'Orbitron', system-ui, sans-serif;        /* Main headings (h1, h2) */
+  --font-family-subheading: 'Exo 2', system-ui, sans-serif;         /* Subheadings (h3, h4) */
+  --font-family-body: 'Inter', system-ui, sans-serif;              /* Paragraphs */
+  --font-family-navigation: 'Space Grotesk', system-ui, sans-serif; /* Navigation */
+  --font-family-emphasis: 'Barlow Condensed', system-ui, sans-serif; /* Emphasis text */
+  --font-family-mono: 'Space Mono', 'Courier New', monospace;
+
+  /* Font Sizes - Magazine Scale */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-md: 1.125rem;     /* 18px */
+  --font-size-lg: 1.5rem;       /* 24px */
+  --font-size-xl: 2rem;         /* 32px */
+  --font-size-2xl: 3rem;        /* 48px */
+  --font-size-3xl: 4rem;        /* 64px */
+  --font-size-4xl: 6rem;        /* 96px - Magazine hero */
+  --font-size-5xl: 8rem;        /* 128px - Display text */
+
+  /* Font Weights - Bolder scale */
+  --font-weight-light: 400;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 800;
+  --font-weight-black: 900;
+
+  /* Letter Spacing - Inverse relationship: bigger fonts = tighter spacing */
+  --letter-spacing-tight: -0.05em;
+  --letter-spacing-tighter: -0.08em;
+  --letter-spacing-tightest: -0.12em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.05em;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;         /* Magazine body */
+
+  /* Typography Defaults */
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Main Headings (h1, h2) - Bold, Uppercase, Orbitron */
+h1, h2 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tightest);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  letter-spacing: var(--letter-spacing-tightest); /* Largest = tightest */
+  color: var(--universe-text-hero); /* Highest priority - 100% white */
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: var(--letter-spacing-tighter);
+  color: var(--universe-text-primary); /* High priority - 95% white */
+}
+
+/* Subheadings (h3, h4) - Exo 2, Bold but not uppercase */
+h3, h4 {
+  font-family: var(--font-family-subheading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--universe-text-emphasis); /* Emphasized - 90% white */
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--universe-text-emphasis); /* Emphasized - 90% white */
+}
+
+/* Minor Headings (h5, h6) - Exo 2 */
+h5, h6 {
+  font-family: var(--font-family-subheading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  color: var(--universe-text-body); /* Body level - 85% white */
+}
+
+h6 {
+  font-size: var(--font-size-md);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--universe-text-body); /* Body level - 85% white */
+}
+
+/* Body Text - Inter */
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--universe-text-body); /* Body text - 85% white */
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--universe-text-body); /* Body text - 85% white */
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Emphasis Text */
+em {
+  font-family: var(--font-family-emphasis);
+  font-weight: var(--font-weight-bold);
+  color: var(--universe-text-emphasis); /* Emphasized - 90% white */
+  font-style: italic;
+}
+
+strong, b {
+  font-family: var(--font-family-emphasis);
+  font-weight: var(--font-weight-black);
+  color: var(--universe-text-primary); /* Strong emphasis - 95% white */
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-4xl: 3.5rem;      /* 56px */
+    --font-size-5xl: 5rem;        /* 80px */
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+

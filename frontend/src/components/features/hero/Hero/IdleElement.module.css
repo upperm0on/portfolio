@@ -1,0 +1,20 @@
+/* IdleElement styles */
+.idleElement {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Disable transitions during idle animation for performance */
+.idleElement[data-idle-active="true"] {
+  transition: none;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .idleElement {
+    transition: none;
+  }
+}
+

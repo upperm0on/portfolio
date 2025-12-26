@@ -1,0 +1,133 @@
+/* HeroCTA styles */
+
+.wrapper {
+  display: inline-block;
+  transform-origin: center center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary variant */
+.cta--primary {
+  background: var(--color-accent, #6366f1);
+  color: var(--color-text-primary, #ffffff);
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+}
+
+.cta--primary:hover {
+  background: var(--color-accent-hover, #4f46e5);
+  box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.cta--primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary variant */
+.cta--secondary {
+  background: transparent;
+  color: var(--color-text-primary, #ffffff);
+  border: 2px solid var(--color-text-primary, #ffffff);
+}
+
+.cta--secondary:hover {
+  background: var(--color-text-primary, #ffffff);
+  color: var(--color-bg-primary, #000000);
+  transform: translateY(-2px);
+}
+
+/* Icon variant */
+.cta--icon {
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--color-text-primary, #ffffff);
+}
+
+.cta--icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Text variant */
+.cta--text {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--color-text-primary, #ffffff);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.cta--text:hover {
+  text-decoration-thickness: 2px;
+  transform: translateY(-2px);
+}
+
+/* Icon and text */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: inline-block;
+}
+
+/* Focus states for accessibility */
+.cta:focus-visible {
+  outline: 2px solid var(--color-accent, #6366f1);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.62rem;
+  }
+
+  .cta--icon {
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.58rem;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+    will-change: auto;
+  }
+
+  .cta:hover {
+    transform: none;
+  }
+}
+

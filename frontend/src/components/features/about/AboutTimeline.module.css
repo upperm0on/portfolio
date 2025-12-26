@@ -1,0 +1,188 @@
+/* About Timeline Styles */
+
+.timeline {
+  position: relative;
+}
+
+.timelineTitle {
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tighter);
+  color: var(--universe-text-primary);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.timelineTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--gradient-aurora);
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.markerDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--universe-text-accent);
+  border: 2px solid var(--universe-bg-primary);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+  z-index: 1;
+}
+
+.markerLine {
+  width: 2px;
+  flex: 1;
+  min-height: 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--universe-text-accent),
+    transparent
+  );
+  opacity: 0.3;
+  margin-top: 0.25rem;
+}
+
+.timelineContent {
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+.timelineHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.itemTitle {
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-subheading);
+  font-weight: var(--font-weight-bold);
+  color: var(--universe-text-emphasis);
+  margin: 0;
+}
+
+.itemType {
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  padding: 0.25rem 0.5rem;
+  background: var(--universe-bg-secondary);
+  border-radius: 0.25rem;
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.organization {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--universe-text-body);
+}
+
+.separator {
+  color: var(--universe-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.location {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-secondary);
+}
+
+.itemDate {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-accent);
+  margin-bottom: 0.75rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.itemDescription {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 0.75rem 0;
+}
+
+.itemTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-tertiary);
+  padding: 0.25rem 0.5rem;
+  background: var(--universe-bg-secondary);
+  border: 1px solid var(--universe-border-primary);
+  border-radius: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timelineTitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: 1.5rem;
+  }
+  
+  .timelineItem {
+    gap: 1rem;
+  }
+  
+  .markerDot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .itemTitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .timelineHeader {
+    gap: 0.5rem;
+  }
+}
+
+

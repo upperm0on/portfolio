@@ -1,0 +1,69 @@
+.section {
+  position: relative;
+  width: 100%;
+}
+
+/* Section Variants */
+.spacious {
+  padding: var(--spacing-section) 0;
+}
+
+.compact {
+  padding: var(--spacing-section-mobile) 0;
+}
+
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-section) 0;
+}
+
+.with-background {
+  background: var(--universe-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  margin: var(--space-8) 0;
+}
+
+/* Background Variants */
+.bg-cosmic {
+  background: var(--gradient-cosmic);
+}
+
+.bg-nebula {
+  background: var(--gradient-stardust);
+  position: relative;
+}
+
+.bg-nebula::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-horizon);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.bg-gradient {
+  background: var(--gradient-aurora);
+  background-size: 200% 200%;
+  animation: aurora-wave 10s ease infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .spacious {
+    padding: var(--spacing-section-mobile) 0;
+  }
+
+  .full-height {
+    min-height: auto;
+    padding: var(--spacing-section-mobile) 0;
+  }
+}
+
+

@@ -1,0 +1,13 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+/* Ensure icons inherit color from parent */
+.icon {
+  color: currentColor;
+}
+

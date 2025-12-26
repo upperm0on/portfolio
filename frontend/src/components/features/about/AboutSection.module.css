@@ -1,0 +1,46 @@
+/* About Section Styles */
+
+.aboutSection {
+  position: relative;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-section, 4rem);
+}
+
+/* Magazine-style layout with columns on desktop */
+@media (min-width: 1024px) {
+  .aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-section, 4rem);
+    column-gap: 3rem;
+  }
+
+  /* Intro spans full width */
+  .aboutContent> :first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Skills spans full width */
+  .aboutContent> :nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* Meta goes to side on desktop */
+  .aboutContent> :last-child {
+    grid-column: 2;
+    grid-row: 2 / 3;
+    /* Limit meta to 2nd row on right */
+    align-self: start;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutContent {
+    gap: var(--spacing-section-mobile, 3rem);
+  }
+}

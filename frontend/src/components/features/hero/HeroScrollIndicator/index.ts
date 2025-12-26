@@ -1,0 +1,2 @@
+export { HeroScrollIndicator } from './HeroScrollIndicator';
+

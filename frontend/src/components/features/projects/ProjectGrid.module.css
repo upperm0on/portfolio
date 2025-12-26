@@ -1,0 +1,57 @@
+/* Project Grid Styles */
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--universe-text-tertiary);
+}
+
+.emptyMessage {
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Desktop - 2-3 columns */
+@media (min-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+/* Large Desktop - 3 columns */
+@media (min-width: 1280px) {
+  .projectGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .projectGrid {
+    gap: var(--space-5);
+  }
+
+  .emptyState {
+    padding: var(--space-8);
+  }
+
+  .emptyMessage {
+    font-size: var(--font-size-base);
+  }
+}
+

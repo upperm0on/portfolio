@@ -1,0 +1,68 @@
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-full);
+  color: var(--universe-text-secondary);
+  font-size: var(--font-size-lg);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.socialLink:hover {
+  color: var(--universe-text-primary);
+  transform: scale(1.1);
+}
+
+.socialIcon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-normal);
+}
+
+.socialLink:hover .socialIcon {
+  transform: scale(1.2);
+}
+
+.socialGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: var(--border-radius-full);
+  background: radial-gradient(circle, var(--universe-comet) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-slow), height var(--transition-slow);
+  z-index: 1;
+}
+
+.socialLink:hover .socialGlow {
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+}
+
+/* Touch optimization */
+@media (hover: none) {
+  .socialLink:active {
+    transform: scale(0.95);
+  }
+}
+
+
+

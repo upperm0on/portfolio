@@ -1,0 +1,51 @@
+/* About Story Styles */
+
+.story {
+  position: relative;
+}
+
+.storyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Magazine-style two-column layout on desktop */
+@media (min-width: 1024px) {
+  .storyContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    column-gap: 3rem;
+  }
+  
+  /* First paragraph spans full width for emphasis */
+  .storyContent > :first-child {
+    grid-column: 1 / -1;
+    font-size: var(--font-size-md);
+    color: var(--universe-text-body);
+  }
+}
+
+.paragraph {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-body);
+  color: var(--universe-text-secondary);
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-normal);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .storyContent {
+    gap: 1.25rem;
+  }
+  
+  .paragraph {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+}
+
+

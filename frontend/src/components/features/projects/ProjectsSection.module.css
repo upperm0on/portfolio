@@ -1,0 +1,62 @@
+/* Projects Section Styles */
+
+.projectsSection {
+  position: relative;
+}
+
+.projectsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-section, 4rem);
+}
+
+.projectsHeader {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.projectsTitle {
+  font-size: var(--font-size-3xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tightest);
+  color: var(--universe-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.projectsSubtitle {
+  font-size: var(--font-size-lg);
+  color: var(--universe-text-secondary);
+  font-family: var(--font-family-body);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loadingState,
+.errorState,
+.emptyState {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--universe-text-secondary);
+}
+
+.errorState {
+  color: var(--universe-star);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projectsContent {
+    gap: var(--spacing-section-mobile, 3rem);
+  }
+
+  .projectsTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .projectsSubtitle {
+    font-size: var(--font-size-base);
+  }
+}
+

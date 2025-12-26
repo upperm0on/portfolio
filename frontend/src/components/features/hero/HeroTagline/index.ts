@@ -1,0 +1,2 @@
+export { HeroTagline } from './HeroTagline';
+
